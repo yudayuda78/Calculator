@@ -1,9 +1,4 @@
-class Calculator{
-    constructor(previousOperandText, currentOperandText){
-        this.previousOperandText = previousOperandText;
-        this.currentOperandText = currentOperandText;
-    };
-}
+
 
 
 
@@ -16,5 +11,12 @@ const clearbuttons = document.querySelectorAll("[data-all-clear]");
 const equalbuttons = document.querySelectorAll("[data-equal]");
 const previousOperandText = document.querySelectorAll("[data-previous-operand]");
 const currentOperandText = document.querySelectorAll("[data-current-operand]");
+
+
+numberButtons.forEach(function(){
+
+});
+
+
 
 
