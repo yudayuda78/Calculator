@@ -35,6 +35,10 @@ clearbuttons.addEventListener('click', (e) => {
     previousOperandText.innerHTML = "";
 })
 
+deletebuttons.addEventListener('click', (e) => {
+    previousOperandText.innerText = previousOperandText.innerText.slice(0, -1);
+})
+
 
 
 
