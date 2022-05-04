@@ -25,7 +25,14 @@ buttons.map( button =>{
 operandButtons.map(operandButton =>{
     operandButton.addEventListener('click', (e) => {
         console.log(e.target.innerText);
-        previousOperandText.innerHTML += e.target.innerHTML;
+        
+        if(e.target.innerText === "×"){
+            previousOperandText.innerText += "*";
+        }else if(e.target.innerText === "÷"){
+            previousOperandText.innerText += "/";
+        }else{
+            previousOperandText.innerHTML += e.target.innerHTML;
+        }
     })
 })
 
@@ -33,10 +40,16 @@ operandButtons.map(operandButton =>{
 
 clearbuttons.addEventListener('click', (e) => {
     previousOperandText.innerHTML = "";
+    currentOperandText.innerText = "";
 })
 
 deletebuttons.addEventListener('click', (e) => {
     previousOperandText.innerText = previousOperandText.innerText.slice(0, -1);
+})
+
+equalbuttons.addEventListener('click', (e) => {
+   currentOperandText.innerText = eval(previousOperandText.innerText);
+    
 })
 
 
